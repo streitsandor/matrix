@@ -1,0 +1,9 @@
+Szükséges könytárak telepítése: (visual studionak be kell húznia auto)
+pip install -r requirements.txt
+
+Telepített könyvtárak mentése:
+pip freeze > requirements.txt
+
+Összes könyvtár törlése:
+python -m pip uninstall -r .\requirements.txt -y
+
