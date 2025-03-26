@@ -26,6 +26,7 @@ class PriorityQueue:
         data = sorted(self.queue)
         priorities, values = zip(*data)
 
+        plt.style.use('classic')
         plt.figure(figsize=(5, 8))
         colors = plt.cm.tab10(np.linspace(0, 1, len(values)))
         plt.bar(range(len(values)), priorities, tick_label=values, color=colors)
