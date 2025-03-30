@@ -47,12 +47,12 @@ class LowerTriangularMatrix:
             k = self.getIndex(i,j)
             self.lowerTriangularMatrixData[k] = data
         else:
-            print("A hivatkozott index " + str(i) + ":" + str(j)+ " nem az alsó háromszög mátrix tartományában van.")
-    def convertMatrixToLowerlowerTriangularMatrix(self):
+            print("A hivatkozott index " + str(i) + ":" + str(j)+ " nem az alsó háromszögmátrix tartományában van.")
+    def convertMatrixToLowerTriangularMatrix(self):
         for j in range(self.size):
             for i in range(self.size):
                 self.setData(j,i,self.testMatrix[j][i])
-    def displayLowerlowerTriangularMatrix(self):
+    def displayLowerTriangularMatrix(self):
         s = ""
         for i in self.lowerTriangularMatrixData:
             s = s + str(i) + " "
@@ -78,7 +78,7 @@ class LowerTriangularMatrix:
             for j in range(len(tempMatrix[0])):
                 plt.text(j, i, str(tempMatrix[i][j]), ha='center', va='center', color='black')
 
-        plt.title("Alsó háromszög mátrix vizualizálása")
+        plt.title("Alsó háromszögmátrix vizualizálása")
         plt.colorbar()
         plt.show()  
 
@@ -94,12 +94,12 @@ if __name__ == "__main__":
     print("Teszt mátrix")
     lowerTriangularMatrixData.printTestMatrix('byRow')
     print("----------------------------------")
-    print("Az alsó háromszög mátrix adatrosának összeállítása.")
-    lowerTriangularMatrixData.convertMatrixToLowerlowerTriangularMatrix()
+    print("Az alsó háromszögmátrix adatsorának összeállítása.")
+    lowerTriangularMatrixData.convertMatrixToLowerTriangularMatrix()
     print("----------------------------------")
-    print("Az alsó háromszög mátrix adatsora.")
-    lowerTriangularMatrixData.displayLowerlowerTriangularMatrix()
+    print("Az alsó háromszögmátrix adatsora.")
+    lowerTriangularMatrixData.displayLowerTriangularMatrix()
     print("----------------------------------")
-    print("Az alsó háromszög mátrix vizualizálása matplotlib.pyplot-al.")
+    print("Az alsó háromszögmátrix vizualizálása matplotlib.pyplot-al.")
     lowerTriangularMatrixData.visualizeLowerTriangleMatrixData()    
     teszt = Class1
