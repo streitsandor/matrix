@@ -3,7 +3,6 @@ import heapq
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from icecream import ic
 from typing import Literal
 from pathlib import Path
 
@@ -31,10 +30,11 @@ class PriorityQueue:
             print("A prioritásos sor üres!")
             return
         data = sorted(self.queue)
+        plt.style.use("classic")
         priorities, values = zip(*data)
-
-        plt.figure(figsize=(8, 5))
-        plt.bar(range(len(values)), priorities, tick_label=values, color="skyblue")
+        plt.figure(figsize=(5, 8))
+        colors = plt.colormaps.get_cmap("tab10_r")(np.linspace(0, 1, len(values)))
+        plt.bar(range(len(values)), priorities, tick_label=values, color=colors)
         plt.xlabel("Elemek")
         plt.ylabel("Prioritás")
         plt.title("Prioritásos sor vizualizáció")
@@ -172,7 +172,7 @@ class LowerTriangularMatrix:
         return lower_matrix
 
 
-# Példa használatra
+# Program belépse
 if __name__ == "__main__":
     csv_files_by_subfolder = {}
 
